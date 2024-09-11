@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Serve the landing page
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^$ landing/index.html [L]
+
+# Handle all other requests via CodeIgniter
+RewriteCond %{REQUEST_URI} !^/landing/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]

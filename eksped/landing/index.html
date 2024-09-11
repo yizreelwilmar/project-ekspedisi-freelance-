@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>BSM-Trans</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+
+    
+  <style>
+      #map {
+          height: 500px;  /* Set the height of the map */
+          width: 100%;    /* Set the width of the map */
+      }
+
+      .testimonial {
+  text-align: center; /* Center the text and image inside the testimonial container */
+}
+
+.testimonial img {
+  display: block; /* Ensure the image is a block-level element */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+  border-radius: 10px; /* Adjust the border radius as needed */
+  max-width: 50%; /* Ensure the image scales with the container */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 15px;
+}
+
+.testimonial_text {
+  font-style: italic;
+  margin-top: 15px; /* Add some space between the image and text */
+}
+
+.client_name {
+  font-weight: bold;
+  margin-top: 10px; /* Add some space between the text */
+}
+
+.client_position {
+  color: gray;
+  margin-top: 5px; /* Add some space between the text */
+}
+
+
+
+  </style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <section class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container d-lg-none">
+          <a class="navbar-brand" href="#">
+            <div class="logo-box">
+              <img src="images/logo1.png" alt="" width="150" height="50">
+              <span>
+              </span>
+            </div>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"> About </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="service.html"> Service</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="shop.html"> Shop </a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link" href="company.html"> Company </a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link " href="contact.html">Contact us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="header_container ">
+          <div class="logo-box">
+            <img src="images/logo1.png" alt="" width="150" height="50">
+            <span>
+
+            </span>
+          </div>
+          <div>
+            <div class="header_top">
+              <div class="header_top-contact">
+
+                <a href="" class="ml-4">
+                  <div>
+                    <img src="images/phone.png" alt="" />
+                  </div>
+                  <span>
+                    (+62) 85109591111
+                  </span>
+                </a>
+                <a href="" class="ml-4">
+                  <div>
+                    <img src="images/mail.png" alt="" />
+                  </div>
+                  <span>
+                    bsmtrans3@gmail.com
+                  </span>
+                </a>
+              </div>
+              <div class="header_top-social">
+                <div>
+                  <a href="https://www.facebook.com/profile.php?id=61565020722994">
+                    <img src="images/fb.png" alt="">
+                  </a>
+                </div>
+                <div>
+                  <a href="https://www.instagram.com/bsmtrans01?igsh=MTF5ZXpta3hyZ2pybA==">
+                    <img src="images/linkedin.png" alt="">
+                  </a>
+                </div>
+                <div>
+                  <a href="https://www.bsmtrans.com">
+                    <img src="images/g-plus.png" alt="">
+                  </a>
+                </div>
+                <div>
+                  <a href="">
+                    <img src="images/twitter.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="header_btm">
+              <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+                    <ul class="navbar-nav  ">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="about.html"> About </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="service.html"> Service</a>
+                      </li>
+                      <!-- <li class="nav-item">
+                        <a class="nav-link" href="shop.html"> Shop </a>
+                      </li> -->
+                      <li class="nav-item">
+                        <a class="nav-link" href="company.html"> Company </a>
+                      </li>
+                      <li class="nav-item ">
+                        <a class="nav-link pr-0" href="contact.html">Contact us</a>
+                      </li>
+                    </ul>
+
+                  </div>
+
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end header section -->
+
+    <!-- slider section -->
+    <section class=" slider_section ">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="slider_item-container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="slider_item-detail">
+                      <div class="slider_form-box">
+                      </div>
+                      <div>
+                        <h1>
+                          Unbeatable <br>
+                          Delivery of goods <br>
+                          Services
+                        </h1>
+
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="slider_img-box">
+                      <img src="images/bg-1.png" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="slider_item-container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="slider_item-detail">
+                      <div class="slider_form-box">
+                        
+                      </div>
+                      <div>
+                        <h1>
+                          Unbeatable <br>
+                          Delivery of goods <br>
+                          Services
+                        </h1>
+
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="slider_img-box">
+                      <img src="images/bg-1.png" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="slider_item-container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="slider_item-detail">
+                      <div class="slider_form-box">
+                        
+                      </div>
+                      <div>
+                        <h1>
+                          Unbeatable <br>
+                          Delivery of goods <br>
+                          Services
+                        </h1>
+
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="slider_img-box">
+
+                      <img src="images/bg-1.png" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="slider_item-container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="slider_item-detail">
+                      <div class="slider_form-box">
+                        
+                      </div>
+                      <div>
+                        <h1>
+                          Unbeatable <br>
+                          Delivery of goods <br>
+                          Services
+                        </h1>
+
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="slider_img-box">
+                      <img src="images/bg-1.png" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </section>
+
+    <!-- end slider section -->
+  </div>
+
+  <!-- about section -->
+  <section class="about_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 class="heading_style">
+            About Us
+          </h2>
+          <p>
+
+          </p>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="about_img-box">
+
+            <img src="images/bg-4.png" alt="" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-md-6 about_detail-container">
+          <div class="about_detail-box">
+            <h3>
+              Company and Transport
+            </h3>
+            <p>
+              Unbeatable
+              trucking & Transport
+              Services
+            </p>
+            <div class="d-flex  justify-content-end">
+              <a href="" class="quote-btn about-btn">
+                <img src="images/white-next.png" alt="">
+                <span>
+                  About More
+                </span>
+
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- end about section -->
+
+  <!-- service section -->
+  <section class="service_section layout_padding">
+    <div class="container">
+      <div class="d-flex justify-content-center">
+        <h2 class="heading_style">
+          Our Services
+        </h2>
+      </div>
+      <div class="row layout_padding2-top">
+        <div class="col-md-4">
+          <div class="service_img-box s-b-1">
+            <img src="images/service-1.jpg" alt="">
+            <div class="d-flex">
+              <h3>
+                CARGO
+
+              </h3>
+            </div>
+          </div>
+          <div class="service-detail">
+            <p>
+              
+            </p>
+            <!-- <div class="d-flex justify-content-end">
+              <a href="" class="service-btn">
+               
+              </a>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service_img-box s-b-2">
+            <img src="images/service-2.jpg" alt="">
+            <div class="d-flex">
+              <h3>
+                LOGISTIC SERVICE
+
+
+              </h3>
+            </div>
+          </div>
+          <div class="service-detail">
+            <p>
+              
+            </p>
+            <!-- <div class="d-flex justify-content-end">
+              <a href="" class="service-btn">
+                
+              </a>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service_img-box s-b-3">
+            <img src="images/service-3.jpg" alt="">
+            <div class="d-flex">
+              <h3>
+                STORAGE
+
+
+              </h3>
+            </div>
+          </div>
+          <div class="service-detail">
+            <p>
+              
+            </p>
+            <!-- <div class="d-flex justify-content-end">
+              <a href="" class="service-btn">
+               
+              </a> -->
+            <!-- </div> -->
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service_img-box s-b-3">
+            <img src="images/service-4.jpg" alt="">
+            <div class="d-flex">
+              <h3>
+                STORAGE
+
+
+              </h3>
+            </div>
+          </div>
+          <div class="service-detail">
+            <p>
+              
+            </p>
+            <!-- <div class="d-flex justify-content-end">
+              <a href="" class="service-btn">
+               
+              </a>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service_img-box s-b-3">
+            <img src="images/service-5.jpg" alt="">
+            <div class="d-flex">
+              <h3>
+                STORAGE
+
+
+              </h3>
+            </div>
+          </div>
+          <div class="service-detail">
+            <p>
+              
+            </p>
+            <!-- <div class="d-flex justify-content-end">
+              <a href="" class="service-btn">
+              </a>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service_img-box s-b-3">
+            <img src="images/service-6.jpg" alt="">
+            <div class="d-flex">
+              <h3>
+                STORAGE
+
+              </h3>
+            </div>
+          </div>
+          <div class="service-detail">
+            <p>
+              
+            </p>
+            <!-- <div class="d-flex justify-content-end">
+              <a href="" class="service-btn">
+              </a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end service section -->
+
+ <!-- testimonial section -->
+<section class="client_section layout_padding">
+  <div class="container">
+    <h2 class="section_title">Client</h2>
+
+    <!-- Carousel -->
+    <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Testimonial 1 -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="testimonial">
+                <img src="images/client1.jpeg" class="d-block w-100" alt="Client 1">
+                <p class="testimonial_text">"This service was amazing! The team was professional and the results were outstanding."</p>
+                <p class="client_name">PT SUKORNITEX</p>
+                <p class="client_position">-</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="testimonial">
+                <img src="images/client2.jpeg" class="d-block w-100" alt="Client 2">
+                <p class="testimonial_text">"I highly recommend this to anyone looking for quality and reliability."</p>
+                <p class="client_name">PT PAJITEX</p>
+                <p class="client_position">-</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="testimonial">
+                <img src="images/client3.jpeg" class="d-block w-100" alt="Client 3">
+                <p class="testimonial_text">"Exceptional service with great attention to detail. Will definitely use again."</p>
+                <p class="client_name">PT BADJATEX</p>
+                <p class="client_position">-</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 4 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="testimonial">
+                <img src="images/client4.jpeg" class="d-block w-100" alt="Client 4">
+                <p class="testimonial_text">"A fantastic experience from start to finish. Highly recommended!"</p>
+                <p class="client_name">PT KAHATEX</p>
+                <p class="client_position">-</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- end testimonial section -->
+
+
+
+
+
+  <!-- company section -->
+  <section class="company_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="d-flex align-items-center h-100">
+            <div class="company-detail">
+              <h3>
+                Company
+              </h3>
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="company_img-box">
+            <img src="images/service-2.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end company section -->
+
+
+
+  <!-- contact section -->
+  <section class="contact_section layout_padding">
+    <div class="d-flex justify-content-center">
+      <h2 class="heading_style">
+        Contact us
+      </h2>
+    </div>
+    <div class="container layout_padding2-top">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="map" class="h-100 w-100"></div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="contact_form-container">
+            <form action="">
+              <div>
+                <input type="text" placeholder="Your Name">
+              </div>
+              <div>
+                <input type="email" placeholder="Your Email">
+              </div>
+              <div>
+                <input type="text" placeholder="Your Phone">
+              </div>
+
+              <div>
+                <input type="text" class="message_input" placeholder="Message">
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="submit " class="">
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+
+
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container ">
+      <div class="row  mb-3 pb-4">
+        <div class="col-md-3 info_logo">
+          <div class="logo-box">
+            <img src="images/logo-white.png" alt="" width="150" height="50">
+            <span>
+            </span>
+          </div>
+          <p>
+            Unbeatable Delivery of goods Services
+          </p>
+          <div class="info_social">
+            <div>
+              <a href="">
+                <img src="images/fb.png" alt="">
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <img src="images/twitter.png" alt="">
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <img src="images/g-plus.png" alt="">
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <img src="images/linkedin.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 info_address">
+          <h5>
+            Address
+          </h5>
+          <p>
+          Jl. Raya Jrebengkembang, Gumeneng, Pagumengan Mas, Kec. Karangdadap, Kabupaten Pekalongan, Jawa Tengah 51174
+          </p>
+          <p>
+            (+62) 851-0959-1111
+          </p>
+          <p>
+            (+62) 851-0959-1111
+          </p>
+          <p>
+            <a href="">
+              bsmtrans3@gmail.com
+            </a>
+          </p>
+        </div>
+        <div class="col-md-3 info_links">
+
+          <div class="info_nav ">
+            <nav class="">
+              <ul>
+                <h5>
+                  Links
+                </h5>
+                <li>
+                  <a href="index.html"> Home</a>
+                </li>
+                <li>
+                  <a href="about.html">About</a>
+                </li>
+                <li>
+                  <a href="service.html"> Service</a>
+                </li>
+                <!-- <li>
+                  <a href="shop.html"> Shop</a>
+                </li> -->
+                <li>
+                  <a href="company.html"> Company</a>
+                </li>
+                <li>
+                  <a href="contact.html">Contact us</a>
+                </li>
+
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="col-md-3 info_news">
+          <h5>
+            Newsletter
+          </h5>
+          <form action="">
+            <div>
+              <input type="text" placeholder="Your Name">
+            </div>
+            <div>
+              <input type="email" placeholder="Email">
+            </div>
+            <div class="d-flex justify-content-end">
+              <button type="submit">
+                Subscribe
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy;By
+      <a href="https://cvbsmtrans.com/">bsmtrans.com</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script>
+      // Initialize the map and set its view to the desired location (Pekalongan)
+      var map = L.map('map').setView([-6.9449, 109.6678], 15); // Coordinates for Pekalongan
+  
+      // Load and display tiles from OpenStreetMap
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+  
+      // Add a marker at the specified location
+      var marker = L.marker([-6.9449, 109.6678]).addTo(map); // Coordinates for Pekalongan
+  
+      // Add a popup to the marker
+      marker.bindPopup("<b>Hello!</b><br>This is your location.").openPopup();
+  </script>
+  
+
+</body>
+
+</body>
+
+</html>
